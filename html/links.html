@@ -4,8 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Links</title>
+    <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
+    <main>
+      <div class="container">
+        <section id="sectionLinks">
+          <!-- formulario -->
+          <div class="links">
+            <h2>Añade tu enlace de interés</h2>
+            <img src="../assets/icons/enlace.png" alt="link" />
+          </div>
+
+          <form action="" class="formLinks" id="formLinks">
+            <input
+              type="text"
+              placeholder="Nombre de tu enlace"
+              id="nameLink"
+              name="nameLink"
+            />
+            <input
+              type="text"
+              placeholder="Pega aqui tu URL"
+              name="url"
+              id="url"
+            />
+            <input type="submit" value="Añadir enlace" id="addLink" />
+          </form>
+          <ul class="listLinks" id="listLinks"></ul>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <nav class="">
+        <a href="clock.html"
+          ><img src="../assets/icons/reloj.png" alt="enlace"
+        /></a>
+
+        <a href="key-generator.html"
+          ><img src="../assets/icons/candado.png" alt="enlace"
+        /></a>
+
+        <a href="links.html"
+          ><img src="../assets/icons/enlace.png" alt="enlace"
+        /></a>
+
+        <a href="weather.html"
+          ><img src="../assets/icons/nube.png" alt="enlace"
+        /></a>
+      </nav>
+    </footer>
     <script src="../js/script.js"></script>
+    <script src="../js/links.js"></script>
   </body>
 </html>

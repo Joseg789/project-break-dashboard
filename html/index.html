@@ -9,29 +9,72 @@
   <body>
     <main>
       <div class="container">
-        <section>
+        <section id="sectionLinks" class="blur-backdrop">
           <!-- formulario -->
           <div class="links">
             <h2>Añade tu enlace de interés</h2>
             <img src="../assets/icons/enlace.png" alt="link" />
           </div>
 
-          <form action="" class="formLinks">
+          <form action="" class="formLinks" id="formLinks">
             <input
               type="text"
               placeholder="Nombre de tu enlace"
               id="nameLink"
+              name="nameLink"
+              required="true"
             />
-            <input type="text" placeholder="Pega aqui tu URL" id="url" />
-            <input type="submit" value="Añadir enlace" id="addLink" />
+            <input
+              type="text"
+              placeholder="Pega aqui tu URL"
+              name="url"
+              id="url"
+              required="true"
+            />
+
+            <input
+              type="submit"
+              value="Añadir enlace"
+              id="addLink"
+              class="btn"
+            />
           </form>
+          <ul class="listLinks" id="listLinks"></ul>
         </section>
       </div>
 
       <div class="container">
         <section>clock</section>
         <section>Weather</section>
-        <section>Keys Generator</section>
+        <section id="key-generator">
+          <div class="container" id="containerFormKey">
+            <form action="" class="formKeys" id="formKeys">
+              <div>
+                <label for="passwordLength"
+                  >Numero de caracteres de la contraseña</label
+                >
+              </div>
+
+              <div class="formKeysContent">
+                <input
+                  type="number"
+                  id="passwordLength"
+                  min="12"
+                  max="40"
+                  value="12"
+                  name="length"
+                  required="true"
+                />
+                <input
+                  type="submit"
+                  value="Generar Contraseña"
+                  id="genPassword"
+                  class="btn"
+                />
+              </div>
+            </form>
+          </div>
+        </section>
       </div>
     </main>
     <footer>
@@ -54,5 +97,9 @@
       </nav>
     </footer>
     <script src="../js/script.js"></script>
+    <script src="../js/links.js"></script>
+    <script src="../js/weather.js"></script>
+    <script src="../js/clock.js"></script>
+    <script src="../js/keys.js"></script>
   </body>
 </html>
