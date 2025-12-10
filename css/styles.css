@@ -166,10 +166,13 @@ section {
   width: 25dvw;
 }
 footer {
+  display: flex;
+  gap: 50px;
   margin: 50px;
 }
 footer img {
   filter: invert(1);
+  width: 32px;
 }
 .links {
   display: flex;
@@ -204,4 +207,17 @@ footer img {
 }
 .formKeysContent {
   display: flex;
+}
+
+.divKey {
+  text-shadow: 0 0 5px rgb(213, 216, 66), 0 0 10px rgb(213, 216, 66);
+  font-weight: bold;
+  font-size: large;
+  letter-spacing: 3px;
+}
+.containerClock {
+  font-size: 58px;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgb(0, 26, 255), 0 0 10px rgb(55, 0, 255);
+  text-align: center;
 }
