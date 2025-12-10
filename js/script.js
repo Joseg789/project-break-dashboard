@@ -4,7 +4,7 @@ const body = document.body;
 
 const changeBackgroundImg = () => {
   const ramdomIndex = Math.floor(Math.random() * 10 + 1); //indice aleatorio
-  const imgPath = `../assets/img/${ramdomIndex}.jpg`; //url completa de la imagen
+  const imgPath = `./project-break-dashboard/assets/img/${ramdomIndex}.jpg`; //url completa de la imagen
   body.style.backgroundImage = `url("${imgPath}")`; //cambiamos la imagen
   body.style.backgroundSize = "cover";
   body.style.backgroundRepeat = "no-repeat";
