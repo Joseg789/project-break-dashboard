@@ -7,7 +7,38 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <main></main>
+    <main>
+      <section id="key-generator" class="blur-backdrop">
+          <div class="container" id="containerFormKey">
+            <form action="" class="formKeys" id="formKeys">
+              <div>
+                <label for="passwordLength" class="divKey"
+                  >Numero de caracteres de la contraseña</label
+                >
+              </div>
+
+              <div class="formKeysContent">
+                <input
+                  type="number"
+                  id="passwordLength"
+                  min="12"
+                  max="40"
+                  value="12"
+                  name="length"
+                  required="true"
+                />
+                <input
+                  type="submit"
+                  value="Generar Contraseña"
+                  id="genPassword"
+                  class="btn"
+                />
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
     <footer>
       <nav class="">
         <a href="clock.html"
@@ -28,5 +59,6 @@
       </nav>
     </footer>
     <script src="./js/script.js"></script>
+    <script src="./js/keys.js"></script>
   </body>
 </html>

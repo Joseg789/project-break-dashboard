@@ -78,10 +78,13 @@ const showLinks = (links) => {
     const anchor = document.createElement("a");
     anchor.href = link.url;
     anchor.target = "_blank";
+    anchor.classList.add("link");
+    anchor.classList.add("blur-backdrop");
     anchor.textContent = link.nameLink;
 
     const btnRemove = document.createElement("button");
     btnRemove.textContent = "X";
+    btnRemove.classList.add("btnRemove");
     btnRemove.addEventListener("click", () => {
       updateLinks(link, links, "DEL");
     });

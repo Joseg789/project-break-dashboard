@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Links</title>
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <main>
       <div class="container">
-        <section id="sectionLinks">
+        <section id="sectionLinks" class="blur-backdrop">
           <!-- formulario -->
           <div class="links">
             <h2>Añade tu enlace de interés</h2>
-            <img src="../assets/icons/enlace.png" alt="link" />
+            <img src="./assets/icons/enlace.png" alt="link" />
           </div>
 
           <form action="" class="formLinks" id="formLinks">
@@ -29,7 +29,12 @@
               name="url"
               id="url"
             />
-            <input type="submit" value="Añadir enlace" id="addLink" />
+            <input
+              type="submit"
+              value="Añadir enlace"
+              id="addLink"
+              class="btn"
+            />
           </form>
           <ul class="listLinks" id="listLinks"></ul>
         </section>
