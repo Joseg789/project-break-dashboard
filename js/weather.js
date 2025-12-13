@@ -58,44 +58,42 @@ const getLocation = () => {
 };
 
 const showWeather = (data) => {
-  const ciudad = document.createElement("p");
-  ciudad.textContent = data.location.name + " / " + data.location.country;
-  const condition = document.createElement("p");
-  condition.textContent = data.current.condition.text;
-  const imgCondition = document.createElement("img");
-  imgCondition.src = data.current.condition.icon;
-  const temp = document.createElement("p");
-  temp.textContent = Math.floor(data.current.temp_c);
-  temp.classList.add("temp");
-  const imgTemp = document.createElement("img");
-  imgTemp.src = "./assets/icons/celsius.png";
-  imgTemp.classList.add("imgTemp");
-  const weather = document.createElement("div");
+  const temp = Math.floor(data.current.temp_c);
 
-  weather.classList.add("divWeather");
-  weather.appendChild(ciudad);
-  weather.appendChild(condition);
-  weather.appendChild(imgCondition);
-  weather.appendChild(temp);
-  weather.appendChild(imgTemp);
-  //div horas
-  const divHours = document.createElement("div");
-  divHours.classList.add("divHours");
-  const ulHours = document.createElement("ul");
-  ulHours.innerHTML = data.forecast.forecastday[0].hour
-    .map((h) => {
-      const time = h.time.split(" ")[1]; //divido el time y me quedo con la posicion 1 que es la hora
-      return `<li><p>${time}</p>
+  divWeather.innerHTML = `
+    <div class="divWeather ">
+    <div>
+     <p>${data.location.name + " / " + data.location.country}</p>
+      <p>${data.current.condition.text}</p>
+      <img src="${data.current.condition.icon}"/>
+    </div>
+     
+      <p class="temp">${temp}</p>
+      <img src="./assets/icons/celsius.png" class="imgTemp"/>
+      
+      <div>
+     <p>Precipitaciones: ${data.current.precip_in}%</p>
+    <p>Humedad: ${data.current.humidity}</p>
+     <p>Viento: ${data.current.wind_kph}</p>
+    </div>
+    </div>
+    
+    <div >
+        <ul class="divHours">
+        ${data.forecast.forecastday[0].hour
+          .map((h) => {
+            const time = h.time.split(" ")[1]; //divido el time y me quedo con la posicion 1 que es la hora
+            return `<li><p>${time}</p>
       <img src="https:${h.condition.icon}"></img>
-      <p>${Math.floor(h.temp_c)} ºC</p>
+      <p class="temp">${Math.floor(h.temp_c)}ºC</p>
       
       </li>`;
-    })
-    .join(" ");
-  ulHours.classList.add("divHours");
-  divHours.appendChild(ulHours);
-  divWeather.appendChild(weather);
-  divWeather.appendChild(divHours);
+          })
+          .join(" ")}
+        </ul>
+      </div>
+
+  `;
 };
 
 getLocation();
