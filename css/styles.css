@@ -268,11 +268,17 @@ footer img {
   margin: 10px;
   color: rgb(238, 211, 123);
 }
-.divKey {
+.labelKey {
   text-shadow: 0 0 5px rgb(213, 216, 66), 0 0 10px rgb(213, 216, 66);
+}
+.divKey {
   font-weight: bold;
   font-size: 14px;
-  letter-spacing: 3px;
+  background: rgba(78, 78, 78, 0.507);
+  backdrop-filter: blur(1px);
+  padding: 20px;
+  border-radius: 16px;
+  margin-left: 32px;
 }
 .containerClock {
   font-size: 58px;
@@ -288,7 +294,6 @@ footer img {
 .containerWeather {
   display: flex;
   flex-direction: column;
-  width: 400px;
   gap: 50px;
 }
 .condition {
@@ -313,6 +318,10 @@ footer img {
 }
 ul {
   list-style: none;
+}
+.dashboard-card {
+  width: 100%;
+  max-width: 400px;
 }
 
 .divHours {
@@ -364,5 +373,8 @@ ul {
 
   footer {
     gap: 30px;
+  }
+  .dashboard-card {
+    max-width: 90%;
   }
 }
