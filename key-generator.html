@@ -9,35 +9,36 @@
   <body>
     <main>
       <section id="key-generator" class="blur-backdrop container">
-          <div class="container" id="containerFormKey" class="containerKeys">
-            <form action="" class="formKeys" id="formKeys">
-              <div>
-                <label for="passwordLength" class="divKey"
-                  >Numero de caracteres de la contraseña</label
-                >
-              </div>
+        <div id="containerFormKey" class="containerKeys">
+          <form action="" class="formKeys" id="formKeys">
+            <div>
+              <h2 class="title">Crea Tu Contraseña Segura</h2>
 
-              <div class="formKeysContent">
-                <input
-                  type="number"
-                  id="passwordLength"
-                  min="12"
-                  max="40"
-                  value="12"
-                  name="length"
-                  required="true"
-                />
-                <input
-                  type="submit"
-                  value="Generar Contraseña"
-                  id="genPassword"
-                  class="btn"
-                />
-              </div>
-            </form>
-          </div>
-        </section>
-      </div>
+              <label for="passwordLength" class="labelKey"
+                >Numero de caracteres de la contraseña</label
+              >
+            </div>
+
+            <div class="formKeysContent">
+              <input
+                type="number"
+                id="passwordLength"
+                min="12"
+                max="40"
+                value="12"
+                name="length"
+                required="true"
+              />
+              <input
+                type="submit"
+                value="Generar Contraseña"
+                id="genPassword"
+                class="btn"
+              />
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
     <footer class="footerKeys">
       <nav class="">
@@ -56,8 +57,9 @@
         <a href="weather.html"
           ><img src="./assets/icons/nube.png" alt="enlace"
         /></a>
-        <a href="index.html"><img src="./assets/icons/cohete.png" alt="enlace" /></a>
-
+        <a href="index.html"
+          ><img src="./assets/icons/cohete.png" alt="enlace"
+        /></a>
       </nav>
     </footer>
     <script src="./js/script.js"></script>

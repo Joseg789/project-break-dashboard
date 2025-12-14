@@ -36,7 +36,7 @@ formKeys.addEventListener("submit", (e) => {
   const password = genPasswordKey(data.length);
   divPassword.textContent = "Contraseña Generada:";
   const pass = document.createElement("p");
-  pass.classList.add("divKey");
+  pass.classList.add("labelKey");
   pass.textContent = password;
   divPassword.appendChild(pass);
   containerFormKeys.appendChild(divPassword);

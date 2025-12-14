@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <link rel="stylesheet" href="./css/styles.css" />
     <meta charset="UTF-8" />
@@ -60,36 +60,37 @@
           </section>
         </div>
         <div class="divKey dashboard-card " >
-          <section id="key-generator">
-            <div  id="containerFormKey">
-              <form action="" class="formKeys" id="formKeys">
-                <div>
-                  <h2 class="title">Crea Tu Contraseña Segura</h2>
-                  <label for="passwordLength" class="labelKey"
-                    >Numero de caracteres de la contraseña</label
-                  >
-                </div>
+         <section id="key-generator">
+        <div id="containerFormKey" class="containerKeys">
+          <form action="" class="formKeys" id="formKeys">
+            <div>
+              <h2 class="title">Crea Tu Contraseña Segura</h2>
 
-                <div class="formKeysContent">
-                  <input
-                    type="number"
-                    id="passwordLength"
-                    min="12"
-                    max="40"
-                    value="12"
-                    name="length"
-                    required
-                  />
-                  <input
-                    type="submit"
-                    value="Generar Contraseña"
-                    id="genPassword"
-                    class="btn"
-                  />
-                </div>
-              </form>
+              <label for="passwordLength" class="labelKey"
+                >Numero de caracteres de la contraseña</label
+              >
             </div>
-          </section>
+
+            <div class="formKeysContent">
+              <input
+                type="number"
+                id="passwordLength"
+                min="12"
+                max="40"
+                value="12"
+                name="length"
+                required="true"
+              />
+              <input
+                type="submit"
+                value="Generar Contraseña"
+                id="genPassword"
+                class="btn"
+              />
+            </div>
+          </form>
+        </div>
+      </section>
         </div>
     </main>
     <footer>

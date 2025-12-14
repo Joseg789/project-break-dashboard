@@ -270,6 +270,9 @@ footer img {
 }
 .labelKey {
   text-shadow: 0 0 5px rgb(213, 216, 66), 0 0 10px rgb(213, 216, 66);
+  text-align: center;
+  padding: 10px;
+  letter-spacing: 2px;
 }
 .divKey {
   font-weight: bold;
@@ -352,7 +355,14 @@ ul {
   width: 100%;
   text-shadow: 0 0 5px rgb(213, 216, 66), 0 0 10px rgb(213, 216, 66);
 }
-
+.containerKeys {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  margin: 10px;
+}
 .footerKeys {
   margin-top: 45vh;
 }
