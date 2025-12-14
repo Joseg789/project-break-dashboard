@@ -61,7 +61,7 @@ const showWeather = (data) => {
   const temp = Math.floor(data.current.temp_c);
 
   divWeather.innerHTML = `
-    <div class="divWeather dashboard-card">
+    <div class="divWeather">
     <div>
      <p>${data.location.name + " / " + data.location.country}</p>
       <p class="condition">${data.current.condition.text}</p>
