@@ -286,7 +286,7 @@ footer img {
 .containerClock {
   font-size: 58px;
   font-weight: bold;
-  text-shadow: 0 0 5px rgb(0, 26, 255), 0 0 10px rgb(55, 0, 255);
+  text-shadow: 0 0 6px rgb(213, 216, 66), 0 0 10px rgb(213, 216, 66);
   text-align: center;
 }
 .title {
@@ -352,8 +352,7 @@ ul {
 .divMsg {
   font-size: 32px;
   text-align: center;
-  width: 100%;
-  text-shadow: 0 0 5px rgb(213, 216, 66), 0 0 10px rgb(213, 216, 66);
+  margin-left: 55px;
 }
 .containerKeys {
   display: flex;

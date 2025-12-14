@@ -58,8 +58,6 @@ const getDate = () => {
   if (clockPage) {
     const msgDiv = document.getElementById("divMsg");
     msgDiv.innerText = msg(hour);
-    msgDiv.classList.add("divMsg");
-    msgDiv.classList.add("blur-backdrop");
   }
 
   divClock.appendChild(hh);
