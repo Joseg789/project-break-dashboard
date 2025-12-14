@@ -64,7 +64,7 @@ const showWeather = (data) => {
     <div class="divWeather ">
     <div>
      <p>${data.location.name + " / " + data.location.country}</p>
-      <p>${data.current.condition.text}</p>
+      <p class="condition">${data.current.condition.text}</p>
       <img src="${data.current.condition.icon}"/>
     </div>
      

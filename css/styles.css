@@ -148,7 +148,7 @@ main {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap; /* evita desbordes laterales */
+  flex-wrap: wrap;
 }
 
 .container {
@@ -173,8 +173,7 @@ input:focus {
   outline: 2px solid rgb(51, 96, 219);
 }
 section {
-  margin: 30px;
-  border-radius: 16px;
+  margin: 20px;
   width: 100%;
   max-width: 400px;
 }
@@ -193,12 +192,22 @@ footer img {
   justify-content: space-between;
 }
 .listLinks li {
-  margin: 30px;
+  width: 120px;
+  height: 120px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  margin: 10px;
 }
 .links {
   display: flex;
-  gap: 30px;
+  gap: 10px;
   font-size: 30px;
+  justify-content: space-between;
+  padding: 5px;
 }
 .btnRemove {
   color: white;
@@ -211,7 +220,12 @@ footer img {
 .btnRemove:hover {
   cursor: pointer;
 }
-
+.section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 /* img  del enlace*/
 .links img {
   filter: invert(1);
@@ -222,6 +236,9 @@ footer img {
   text-decoration: none;
   color: white;
   font-weight: bold;
+  font-size: 14px;
+  max-width: 100%;
+  word-break: break-word;
 }
 .btn {
   background-color: rgb(51, 96, 219);
@@ -239,9 +256,11 @@ footer img {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  text-align: center;
 }
 .formKeysContent {
   display: flex;
+  justify-content: center;
 }
 
 .divDate {
@@ -252,7 +271,7 @@ footer img {
 .divKey {
   text-shadow: 0 0 5px rgb(213, 216, 66), 0 0 10px rgb(213, 216, 66);
   font-weight: bold;
-  font-size: large;
+  font-size: 14px;
   letter-spacing: 3px;
 }
 .containerClock {
@@ -269,13 +288,12 @@ footer img {
 .containerWeather {
   display: flex;
   flex-direction: column;
-  background: rgba(78, 78, 78, 0.274);
   width: 400px;
-  border-radius: 16px;
-  padding: 30px;
-  margin: 30px;
-  backdrop-filter: blur(1px);
   gap: 50px;
+}
+.condition {
+  margin: 2px;
+  text-shadow: 0 0 6px rgb(213, 216, 66), 0 0 10px rgb(213, 216, 66);
 }
 .divWeather {
   display: flex;
@@ -334,6 +352,10 @@ ul {
   main {
     flex-direction: column;
     align-items: center;
+  }
+  .containerWeather {
+    width: 100%;
+    max-width: 350px;
   }
 
   section {
