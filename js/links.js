@@ -64,15 +64,18 @@ const updateLinks = (link, currentLinks, op) => {
       updatedLinks = currentLinks.filter((l) => l.nameLink !== link.nameLink);
     }
   }
-  console.log("links", updatedLinks);
-  links = updatedLinks; //
+  links = updatedLinks;
   setLinks(updatedLinks);
-  console.log("LOCAL", JSON.parse(localStorage.getItem("dashboardsLinks")));
   showLinks(updatedLinks);
 };
 
 const showLinks = (links) => {
   listLinks.innerHTML = "";
+  if (links.length === 0) {
+    listLinks.innerHTML = `
+    <h2 class="title">No has añadido ningun Link </h2>
+    `;
+  }
   links.forEach((link) => {
     const li = document.createElement("li");
     const anchor = document.createElement("a");

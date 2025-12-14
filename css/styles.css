@@ -137,11 +137,12 @@ table {
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   color: white;
   transition: all 1s ease-in-out;
   background-position: center center;
+  min-height: 100vh;
+  justify-content: space-between;
 }
 main {
   width: 100%;
@@ -165,16 +166,21 @@ main {
 input {
   padding: 14px;
   border-radius: 8px;
+  border: none;
+  outline: none;
+}
+input:focus {
+  outline: 2px solid rgb(51, 96, 219);
 }
 section {
-  margin: 50px;
+  margin: 30px;
   border-radius: 16px;
-  width: 25dvw;
+  width: 100%;
+  max-width: 400px;
 }
-footer {
+footer nav {
   display: flex;
-  gap: 50px;
-  margin: 50px;
+  gap: 20px;
 }
 footer img {
   filter: invert(1);
@@ -220,11 +226,6 @@ footer img {
 .btn {
   background-color: rgb(51, 96, 219);
   color: white;
-}
-
-.blur-window {
-  background: rgba(255, 255, 255, 0.2);
-  filter: blur(5px);
 }
 
 .blur-backdrop {
@@ -323,4 +324,23 @@ ul {
   text-align: center;
   width: 100%;
   text-shadow: 0 0 5px rgb(213, 216, 66), 0 0 10px rgb(213, 216, 66);
+}
+
+.footerKeys {
+  margin-top: 45vh;
+}
+/*medias */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section {
+    max-width: 90%;
+  }
+
+  footer {
+    gap: 30px;
+  }
 }
