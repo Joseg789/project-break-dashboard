@@ -372,7 +372,7 @@ ul {
     align-items: center;
   }
   .containerWeather {
-    width: 60%;
+    width: 90%;
     max-width: 350px;
   }
 
@@ -385,5 +385,110 @@ ul {
   }
   .dashboard-card {
     max-width: 80%;
+  }
+}
+.error {
+  font-weight: bold;
+  text-shadow: 0 0 6px rgb(213, 216, 66), 0 0 10px rgb(213, 216, 66);
+}
+
+@media (max-width: 1024px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section {
+    max-width: 90%;
+  }
+
+  .dashboard-card {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  section {
+    max-width: 80dvw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dashboard-card {
+    max-width: 90%;
+  }
+  .divWeather {
+    width: 100%;
+  }
+  .error {
+    width: 100%;
+    font-size: 14px;
+  }
+  .links h2 {
+    font-size: 16px;
+  }
+  body {
+    padding: 10px;
+  }
+
+  main {
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    gap: 10px;
+  }
+
+  .containerWeather {
+    gap: 10px;
+  }
+
+  .containerClock {
+    font-size: 30px;
+  }
+
+  .divMsg {
+    font-size: 22px;
+    margin-left: 0;
+  }
+
+  .listLinks {
+    justify-content: center;
+  }
+
+  .listLinks li {
+    width: 100px;
+    height: 100px;
+    margin: 8px;
+  }
+}
+@media (max-width: 360px) {
+  .containerClock {
+    font-size: 34px;
+  }
+
+  .temp {
+    font-size: 36px;
+  }
+
+  .listLinks li {
+    width: 90px;
+    height: 90px;
+  }
+
+  .divMsg {
+    font-size: 20px;
+  }
+
+  .error {
+    text-align: center;
   }
 }

@@ -1,6 +1,6 @@
 const divWeather = document.getElementById("containerWeather");
 
-const getWeatherData = async (city) => {
+const getWeatherData = async (city, error) => {
   const apiKey = "f17260db772c422aada181319251012";
 
   const url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&aqi=no`;
@@ -11,8 +11,7 @@ const getWeatherData = async (city) => {
       throw new Error("Error in the Request" + response.status);
     }
     const data = await response.json();
-    console.log(data);
-    showWeather(data);
+    showWeather(data, error);
   } catch (error) {
     console.log(error);
   }
@@ -20,6 +19,11 @@ const getWeatherData = async (city) => {
 
 //obtenemos la localizacion
 const getLocation = () => {
+  let city;
+  let defaultLocation = "Madrid,es"; //si hay error de ubicacion mostramos una ciudad por defecto
+  city = defaultLocation;
+  let error = true;
+
   navigator.geolocation.getCurrentPosition(async (pos) => {
     const { latitude, longitude } = pos.coords;
 
@@ -28,44 +32,51 @@ const getLocation = () => {
     // 1. Obtener ciudad a partir de coordenadas (Reverse Geocoding)
     const geoUrl = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`;
 
-    let city;
     try {
       const response = await fetch(geoUrl);
       const data = await response.json();
-      console.log(data);
       city =
         data.address.city ||
         data.address.town ||
         data.address.village ||
         data.address.hamlet;
 
-      if (!city) {
+      if (city.length === 0) {
+        console("ENTRE");
+        city = defaultLocation;
         console.log("No se pudo identificar la ciudad. ");
-        return;
+        error = true;
       }
+      error = false;
       //caso borde por si  alguna ciudad que se  llame igual a alguna española le incluimos el ,es para diferenciarla (por ejemplo mi ciudad Valencia Venezuela xD)
       if (data.display_name.includes("España")) {
         city += ",es";
       }
       console.log("Ciudad detectada:", city);
       //obtenemos los datos del clima
-      getWeatherData(city);
+      getWeatherData(city, error);
     } catch (error) {
       console.error("Error obteniendo la ciudad:", error);
       return;
     }
   });
+  getWeatherData(city, error);
 };
 
-const showWeather = (data) => {
+const showWeather = (data, error) => {
   const temp = Math.floor(data.current.temp_c);
 
   divWeather.innerHTML = `
     <div class="divWeather">
     <div>
      <p>${data.location.name + " / " + data.location.country}</p>
-      <p class="condition">${data.current.condition.text}</p>
-      <img src="${data.current.condition.icon}"/>
+     <p class="condition">${data.current.condition.text}</p>
+     <img src="${data.current.condition.icon}"/>
+     ${
+       error
+         ? `<p class="error"> ⚠️ Debes permitir el acceso a la ubicacion</p>`
+         : ""
+     }
     </div>
      
       <p class="temp">${temp}</p>
